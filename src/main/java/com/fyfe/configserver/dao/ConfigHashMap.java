@@ -2,10 +2,12 @@ package com.fyfe.configserver.dao;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class ConfigHashMap implements ConfigMap {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ConfigMap.class);
