@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.fyfe.config-server' is invalid and this project uses 'com.fyfe.helloserver' instead.
+* The original package name 'com.fyfe.config-server' is invalid and this project uses 'com.fyfe.configserver' instead.
 
 # Getting Started
 
