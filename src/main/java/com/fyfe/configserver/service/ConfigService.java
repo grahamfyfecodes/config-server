@@ -13,14 +13,23 @@ public class ConfigService {
     }
 
     public String put(String key, String value) {
-        return configMap.put(key, value);
+        String replacedValue = configMap.put(key, value);
+        return createPutReturnString(key, value, replacedValue);
+    }
+
+    private String createPutReturnString(String key, String value, String replacedValue) {
+        return replacedValue == null ?
+                "Added Key: " + key + ", Value: " + value :
+                "Added Key: " + key + ", Value: " + value + "\nReplaced: " + replacedValue;
     }
 
     public String get(String key) {
-        return configMap.get(key);
+        String value = configMap.get(key);
+        return value == null ? "No value for key: " + key : value;
     }
 
     public String delete(String key) {
-        return configMap.delete(key);
+        String value = configMap.delete(key);
+        return value == null ? "No value deleted for key: " + key : "Value: " + value + " deleted for key: " + key;
     }
 }
